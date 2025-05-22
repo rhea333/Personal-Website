@@ -2,6 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { roboWork } from '../utils';
+import {CGIImg} from '../utils'
+import {SOTIImg} from '../utils'
+import {DAImg} from '../utils'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,9 +13,9 @@ const WorkExp = () => {
   const headingRef = useRef(null);
 
   const jobs = [
-    { icon: '🏢', title: 'Software Engineer at TechCorp', description: 'Worked on building scalable web applications using React and Node.js.' },
-    { icon: '💼', title: 'Backend Developer at CodeWorks', description: 'Developed robust APIs and microservices for enterprise solutions.' },
-    { icon: '👨‍💻', title: 'AI Researcher at InnovateAI', description: 'Conducted research on machine learning models and their optimization.' },
+    { image: CGIImg , title: 'Software Developer Intern @ CGI', description: 'Developed data transformation programs to migrate current processes from SAS Mainframe to Azure Edge' },
+    { image: SOTIImg, title: 'Product Management Intern @ SOTI', description: 'Acted as liaison, communicating between Product, Customer Facing, and all Development teams reporting to Product Director to orchestrate Backlog Grooming, Sprint Planning, and Aha! administration for all internal stakeholders.' },
+    { image: DAImg, title: 'Prompt Engineering and Annotating @ DataAnnotationTech', description: 'Designed and optimized prompts for AI models to generate code, analyzing and annotating model outputs to identify and correct inconsistencies.' },
   ];
 
   useEffect(() => {
@@ -47,7 +50,7 @@ const WorkExp = () => {
   return (
     <section id="work-exp" className="w-screen h-full common-padding bg-zinc">
       <div className="screen-max-width">
-        <div ref={headingRef} className="text-center text-4xl text-gray-400 font-semibold mb-8">Work Experience</div>
+        <div ref={headingRef} className="text-center text-4xl text-gray-400 font-semibold mb-10">Work Experience</div>
 
         {/* Timeline and Video Row */}
         <div className="flex flex-col lg:flex-row">
@@ -56,8 +59,8 @@ const WorkExp = () => {
           <div className="timeline-container flex flex-col space-y-10 w-full lg:w-1/2" ref={timelineRef}>
             {jobs.map((job, index) => (
               <div key={index} className="job-card p-5 bg-white rounded-lg shadow-md flex flex-col items-center">
-                <div className="icon text-4xl mb-4">{job.icon}</div>
-                <h2 className="text-xl font-bold mb-2">{job.title}</h2>
+                <img src={job.image} alt={job.title} className="w-16 h-16 mb-4 object-contain justify-center" />
+                <h2 className="text-xl font-bold mb-2 text-black text-center">{job.title}</h2>
                 <p className="text-gray-600 text-center">{job.description}</p>
               </div>
             ))}

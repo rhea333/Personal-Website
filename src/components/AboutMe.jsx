@@ -2,6 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { roboPhone } from '../utils';
+import { DJBoardImg } from '../utils';
+import { TKDFightvid } from '../utils';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,10 +63,37 @@ const AboutMe = () => {
 
           {/* About Me text on the right */}
           <div className="about-text-container w-full lg:w-1/2" ref={textRef}>
-            
-            <p className="mt-4 text-right about-text">
-              Do you do anything other than work?! 
+            <p className="mt-4 text-right about-text text-white">
+              I like to pick up random hobbies here and there, and currently my main interest is DJing! I like to mix anything from trance to recession club music (not super into dnb)
             </p>
+            
+
+            {/* Side-by-side media section */}
+            <div className="mt-6 flex justify-center items-start gap-4 about-text">
+              {/* Image */}
+              <img
+                src={DJBoardImg}
+                alt="DJing hobby"
+                className="w-64 h-40 object-cover rounded-lg shadow-lg"
+              />
+              </div>
+              
+              <p className="mt-4 text-left about-text text-white">
+              I'm also a martial artist! Take a look at one of my more recent tournaments. I'm the one in blue {'>:)'}
+              </p>
+
+              <div className="mt-6 flex justify-center items-start gap-4 about-text">
+              {/* Video */}
+              <video
+                className="w-64 h-40 object-cover rounded-lg shadow-lg pointer-events-none"
+                autoPlay
+                loop
+                muted
+                key={TKDFightvid}
+              >
+                <source src={TKDFightvid} type="video/mp4" />
+              </video>
+            </div>
           </div>
         </div>
 

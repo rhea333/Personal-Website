@@ -19,7 +19,12 @@ const Highlights = () => {
           </h1>
         </div>
 
+
       </div>
+
+
+{/* add nav sections here */}
+
       </section>
   )
 }

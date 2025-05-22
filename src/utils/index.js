@@ -32,6 +32,33 @@ import explore2 from "/assets/images/explore2.jpg";
 import chip from "/assets/images/chip.jpeg";
 import frame from "/assets/images/frame.png";
 
+import LocalLove from "/assets/images/LocalLove.png"
+import FinanceLLM from "/assets/images/LLM.png"
+import DigitClass from "/assets/images/DigitClass.png"
+import OceanLink from "/assets/images/OceanLink.png"
+import Whisper from "/assets/images/ChatApp.png"
+import ColourInv from "/assets/images/ColourInv.png"
+import ScotiaChain from "/assets/images/ScotiaChain.png"
+import CGI from "/assets/images/CGI.png"
+import SOTI from "/assets/images/soti.png"
+import DA from "/assets/images/DataAnnot.png"
+import DJBoard from "/assets/images/DJBoard.png"
+import TKDFight from "/assets/videos/TKDFight.mp4"
+
+export const LocalLoveImg = LocalLove;
+export const FinanceLLMImg = FinanceLLM;
+export const DigitClassImg = DigitClass;
+export const OceanLinkImg = OceanLink;
+export const WhisperImg = Whisper;
+export const ColourInvImg = ColourInv;
+export const ScotiaChainImg = ScotiaChain;
+export const CGIImg = CGI;
+export const SOTIImg = SOTI;
+export const DAImg = DA;
+export const DJBoardImg = DJBoard;
+export const TKDFightvid = TKDFight;
+
+
 export const heroVideo = hmv;
 export const smallHeroVideo = smallmv;
 export const highlightFirstVideo = highlightFirstmv;
