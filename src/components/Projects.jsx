@@ -39,7 +39,7 @@ const projectData = [
   },
   {
     title: "Whisper",
-    details: "Secure Chat app hosting encrypted messaging with a functoinality to create announcement channels.",
+    details: "Secure Chat app hosting encrypted messaging with a functionality to create announcement channels.",
     image: WhisperImg,
   },
   {
